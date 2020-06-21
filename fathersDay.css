@@ -1,0 +1,56 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: black;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    color: teal;
+}
+h2{
+    text-align: left;
+    font-size: 25px;
+    color: darkkhaki;
+}
+body{
+    font-family: 'Piedra', cursive;
+}
+
+header{
+    width: 100vw;
+    height: 100vh;
+}
+
+.strapline-container{
+    border: 2px solid blue;
+    width: 100%;
+    height: 80%;
+    margin: auto 0;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.main-strapline{
+    color: white;
+    font-size: 110px;
+    text-transform: uppercase;
+    margin: 50px 0px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.second-strapline{
+    color: violet;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.thanks-section{
+    color: burlywood;
+    text-align: center;
+}

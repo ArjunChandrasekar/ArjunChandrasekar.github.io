@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="fathersDay.css">
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Piedra&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+        <title>Happy Father's Day!</title>
+
+        <style type="text/css">
+            img{
+                width: 100%;
+                height: 550px;
+            }
+            #slider{
+                width: 750px;
+                height: 560px;
+                margin: 20px auto;
+                position: relative;
+                border: 10px solid white;
+                box-shadow: 0px 0px 5px 2px #ccc;
+            }
+
+            button{
+                padding: 20px;
+                border: none;
+                background: #37f;
+                font-size: 30px;
+                color: white;
+                position: absolute;
+                top: 45%;
+                cursor: pointer;
+            }
+
+            .next{
+                border-radius: 10px 0px 0px 10px;
+                margin-left: 700px;
+            }
+
+            .prew{
+                border-radius: 0px 10px 10px 0px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="strapline-container">
+                <h1 class="main-strapline">Happy Father's Day!</h1>
+                <br>
+                <br>
+                <h1 class="second-strapline">Chandrasekar Kannan</h1>
+            </div>
+        </header>
+
+        <main>
+            <h1>Photo Booth</h1>
+            <br>
+            <h1>14 years and counting!</h1>
+            <div id="slider">
+                <div id="box">
+                    <img src="a.jpg">
+                </div>
+
+                <button class="prew" onclick="prewImage()">-</button>
+                <button class="next" onclick="nextImage()">+</button>
+            </div>
+
+            <script type="text/javascript">
+                var slider_content = document.getElementById("box");
+                var image = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"];
+                var i = image.length;
+
+                function nextImage(){
+                    if(i < image.length){
+                        i += 1;
+                    }else{
+                        i = 1;
+                    }
+                    slider_content.innerHTML = "<img src="+image[i-1]+".jpg>";
+                }
+
+                function prewImage(){
+                    if(i < image.length+1 && i>1){
+                        i -= 1;
+                    }else{
+                        i = image.length;
+                    }
+                    slider_content.innerHTML = "<img src="+image[i-1]+".jpg>";
+                }
+
+            </script>
+            <br>
+            <br>
+            <h1>Thank You!</h1>
+            <div class="thanks-section">
+                <br>
+                    <h3>
+                        Thank you so much for everything you have done for us.<br>
+                        There are many reasons why you are the best dad we could ever ask for,<br>
+                        some being that you are always goofy and makings us laugh, or that you are polite <br>
+                        and never lose your temper with us if we make mistakes.<br>
+                        But what inspires me the most is the fact that you are the most humble human I know; you never<br>
+                        ask for anything in return, you always put us in your best interests, doing everything you can<br>
+                        to make us happy. And for that, I appriciate and thank you.
+                        We love you, 
+                        Fam.
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </h3>
+            </div>
+
+        </main>
+    </body>
+</html>
