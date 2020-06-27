@@ -4,8 +4,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 var stars = [], FPS = 60, x = 100, mouse = {
-  x: 0,
-  y: 0
+  x: 0, y: 0
 }
 
 for (var i = 0; i < x; i++){
@@ -16,12 +15,11 @@ for (var i = 0; i < x; i++){
 }
 function draw() {
   ctx.clearRect(0,0,canvas.width,canvas.height)
-  ctx.globalCompositeOperation = "lighter";
   for (var i = 0, x = stars.length; i < x; i++){
     var s = stars[i];
-    ctx.fillStyle = "blue";
+    ctx.fillStyle = "white";
     ctx.beginPath();
-    ctx.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
+    ctx.arc(s.x, s.y, s.radius, 0, Math.PI);
     ctx.fill();
     ctx.fillStyle = "black";
     ctx.stroke()
@@ -40,7 +38,7 @@ function draw() {
       }
     }
   }
-  ctx.lineWidth = 0.05;
+  ctx.lineWidth = 0;
   ctx.strokeStyle = 'black';
   ctx.stroke();
 }
@@ -74,10 +72,10 @@ canvas.addEventListener('mousemove', function(e){
   mouse.y = e.clientY;
 });
 
-function tick() {
+function play() {
   draw();
   update();
-  requestAnimationFrame(tick);
+  requestAnimationFrame(play);
 }
 
-tick();
+play();
