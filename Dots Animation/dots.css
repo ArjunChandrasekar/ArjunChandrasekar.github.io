@@ -1,0 +1,14 @@
+canvas {
+    background: rgb(204, 204, 3);
+}
+
+body{
+    background-color: black;
+}
+
+h1{
+    font-style: italic;
+    color: burlywood;
+    text-align: center;
+    margin: 200;
+}
